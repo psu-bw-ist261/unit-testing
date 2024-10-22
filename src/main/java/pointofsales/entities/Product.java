@@ -9,7 +9,12 @@ public class Product {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(String category) throws Exception {
+        if (!category.equals("Audio") &&
+                !category.equals("Food") &&
+                !category.equals("Drinks")) {
+            throw new Exception("Unsupported category");
+        }
         this.category = category;
     }
 

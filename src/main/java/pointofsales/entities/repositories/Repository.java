@@ -3,7 +3,7 @@ package pointofsales.entities.repositories;
 import java.util.List;
 
 public interface Repository<T> {
-    public void add();
+    public void add(T entity) throws Exception;
 
     public void delete(T entity);
 
